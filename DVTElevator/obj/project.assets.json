@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "DTVElevator.Dto/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/DTVElevator.Dto.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DTVElevator.Dto.dll": {}
+        }
+      },
+      "DVTElevator.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DVTElevator.Service": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DVTElevator.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DVTElevator.Repository.dll": {}
+        }
+      },
+      "DVTElevator.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DTVElevator.Dto": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DVTElevator.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DVTElevator.Service.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DTVElevator.Dto/1.0.0": {
+      "type": "project",
+      "path": "../DTVElevator.Dto/DTVElevator.Dto.csproj",
+      "msbuildProject": "../DTVElevator.Dto/DTVElevator.Dto.csproj"
+    },
+    "DVTElevator.Repository/1.0.0": {
+      "type": "project",
+      "path": "../DVTElevator.Repository/DVTElevator.Repository.csproj",
+      "msbuildProject": "../DVTElevator.Repository/DVTElevator.Repository.csproj"
+    },
+    "DVTElevator.Service/1.0.0": {
+      "type": "project",
+      "path": "../DVTElevator.Service/DVTElevator.Service.csproj",
+      "msbuildProject": "../DVTElevator.Service/DVTElevator.Service.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "DVTElevator.Repository >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\E.Rezaei\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Projects\\DVTElevator\\DVTElevator\\DVTElevator.App.csproj",
+      "projectName": "DVTElevator.App",
+      "projectPath": "D:\\Projects\\DVTElevator\\DVTElevator\\DVTElevator.App.csproj",
+      "packagesPath": "C:\\Users\\E.Rezaei\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\DVTElevator\\DVTElevator\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\E.Rezaei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "D:\\Projects\\DVTElevator\\DVTElevator.Repository\\DVTElevator.Repository.csproj": {
+              "projectPath": "D:\\Projects\\DVTElevator\\DVTElevator.Repository\\DVTElevator.Repository.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

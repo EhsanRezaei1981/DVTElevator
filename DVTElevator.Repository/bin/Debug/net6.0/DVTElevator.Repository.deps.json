@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "DVTElevator.Repository/1.0.0": {
+        "dependencies": {
+          "DVTElevator.Service": "1.0.0"
+        },
+        "runtime": {
+          "DVTElevator.Repository.dll": {}
+        }
+      },
+      "DTVElevator.Dto/1.0.0": {
+        "runtime": {
+          "DTVElevator.Dto.dll": {}
+        }
+      },
+      "DVTElevator.Service/1.0.0": {
+        "dependencies": {
+          "DTVElevator.Dto": "1.0.0"
+        },
+        "runtime": {
+          "DVTElevator.Service.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DVTElevator.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DTVElevator.Dto/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DVTElevator.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

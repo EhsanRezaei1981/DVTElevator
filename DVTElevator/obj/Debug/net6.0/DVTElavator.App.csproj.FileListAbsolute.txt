@@ -1,0 +1,15 @@
+D:\Projects\DVT_Elavator\DVT_Elavator\bin\Debug\net6.0\DVTElavator.App.exe
+D:\Projects\DVT_Elavator\DVT_Elavator\bin\Debug\net6.0\DVTElavator.App.deps.json
+D:\Projects\DVT_Elavator\DVT_Elavator\bin\Debug\net6.0\DVTElavator.App.runtimeconfig.json
+D:\Projects\DVT_Elavator\DVT_Elavator\bin\Debug\net6.0\DVTElavator.App.dll
+D:\Projects\DVT_Elavator\DVT_Elavator\bin\Debug\net6.0\DVTElavator.App.pdb
+D:\Projects\DVT_Elavator\DVT_Elavator\obj\Debug\net6.0\DVTElavator.App.csproj.AssemblyReference.cache
+D:\Projects\DVT_Elavator\DVT_Elavator\obj\Debug\net6.0\DVTElavator.App.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\DVT_Elavator\DVT_Elavator\obj\Debug\net6.0\DVTElavator.App.AssemblyInfoInputs.cache
+D:\Projects\DVT_Elavator\DVT_Elavator\obj\Debug\net6.0\DVTElavator.App.AssemblyInfo.cs
+D:\Projects\DVT_Elavator\DVT_Elavator\obj\Debug\net6.0\DVTElavator.App.csproj.CoreCompileInputs.cache
+D:\Projects\DVT_Elavator\DVT_Elavator\obj\Debug\net6.0\DVTElavator.App.dll
+D:\Projects\DVT_Elavator\DVT_Elavator\obj\Debug\net6.0\refint\DVTElavator.App.dll
+D:\Projects\DVT_Elavator\DVT_Elavator\obj\Debug\net6.0\DVTElavator.App.pdb
+D:\Projects\DVT_Elavator\DVT_Elavator\obj\Debug\net6.0\DVTElavator.App.genruntimeconfig.cache
+D:\Projects\DVT_Elavator\DVT_Elavator\obj\Debug\net6.0\ref\DVTElavator.App.dll
