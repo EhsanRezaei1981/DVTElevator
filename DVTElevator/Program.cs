@@ -26,9 +26,6 @@ while (!isEnd) {
         case "3":
             takeAnElevator();
             break;
-        //case "4":
-        //    addPerson();
-        //    break;
         case "4":
             moveElevator();
             break;
@@ -146,20 +143,6 @@ void takeAnElevator() {
     }
 }
 
-//void addPerson() {
-//    if (selectedElevator is null) {
-//        WriteMessage("No elevator selected", true);
-//        return;
-//    }
-//    Console.Write("Weight of the person: ");
-//    var weight=int.Parse(Console.ReadLine());
-//    Console.Write("Floor to go: ");
-//    var floor = int.Parse(Console.ReadLine());
-//    var result = selectedElevator.AddPerson(new DTVElevator.Dto.Model.Person { Weight = weight, FloorToGo = floor });
-//    WriteMessage(result.Message,!result.Successful);
-//    return;
-//}
-
 void moveElevator()
 {
     var result=repo.Move();
@@ -187,13 +170,9 @@ void loadMenus()
         Command="3",
         Name="Take an Elevator"
     },
-    //new Menu{
-    //    Command="4",
-    //    Name="Add Person"
-    //},
     new Menu{
         Command="4",
-        Name="Move Selected Elevator"
+        Name="Move"
     },
     new Menu{
         Command="5",

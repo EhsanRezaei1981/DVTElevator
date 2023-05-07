@@ -123,52 +123,7 @@ namespace DTVElevator.Service.Elevator
                 _ => "Error"
             };
         }
-
-        //ErrorHandling AddPerson(Person person)
-        //{
-        //    var operating = CheckIfElevatorOperates();
-        //    if (!operating.Successful)
-        //        return operating;
-
-        //    if (WorkingFloors is null || !WorkingFloors.Any())
-        //        return new ErrorHandling
-        //        {
-        //            Message = "No floors specified",
-        //        };            
-
-        //    if (Status != ElevatorStatus.Stopped)
-        //        return new ErrorHandling
-        //        {
-        //            Message = "Safety issue. We cannot accept adding person while the elavator is moving.",
-        //        };
-
-        //    if (!WorkingFloors.Any(x => x == person.FloorToGo))
-        //        return new ErrorHandling
-        //        {
-        //            Message = $"Limited floor. The elavator cannot stop in floor {person.FloorToGo} or the floor does not exist.",
-        //        };
-
-        //    var totalCurrentWeight = People.Sum(x => x.Weight);
-        //    if (totalCurrentWeight + person.Weight > MaxWeight)
-        //        return new ErrorHandling
-        //        {
-        //            Message = "Limited weight. Please use another elavator."
-        //        };
-
-        //    if (person.FloorToGo == CurrentFloor)
-        //        return new ErrorHandling
-        //        {
-        //            Message = $"You are in the floor {person.FloorToGo}."
-        //        };
-
-        //    People.Add(person);
-
-        //    return new ErrorHandling
-        //    {
-        //        Message = "A person added successfully.",
-        //        Successful = true
-        //    };
-        //}
+        
 
         public void SetCurrentFloor(int floor) {
             CurrentFloor = floor;

@@ -15,7 +15,6 @@ namespace DTVElevator.Dto.Model
         ElevatorStatus Status { get; }
         ElevatorDirection Direction{ get; }
         ErrorHandling Move();
-        //ErrorHandling AddPerson(Person person);
         /// <summary>
         /// Remove a person from the people randomly
         /// </summary>
