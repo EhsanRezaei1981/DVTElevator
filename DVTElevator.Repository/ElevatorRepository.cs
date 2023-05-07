@@ -1,12 +1,11 @@
 ﻿using DTVElevator.Dto.Model;
 using DTVElevator.Service.Elevator;
-using System.Security.Cryptography.X509Certificates;
 
 namespace DVTElevator.Repository
 {
     public class ElevatorRepository: IElevatorRepository
     {
-        public List<ElevatorService> Elevators = new();
+        public List<ElevatorService> Elevators { get; set; }= new ();
 
         public  ErrorHandling AddElevator(ElevatorService elevator) {
             if (string.IsNullOrWhiteSpace(elevator?.Name))

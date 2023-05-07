@@ -7,7 +7,7 @@ Console.WriteLine("Please use the menu to command the DVElevator");
 var isEnd = false;
 var command= "";
 var isExit = false;
-var repo = new ElevatorRepository();
+IElevatorRepository repo = new ElevatorRepository();
 int? elevatorRequestedFromFloor = null;
 DTVElevator.Service.Elevator.ElevatorService selectedElevator = null;
 List<Menu> menus;
