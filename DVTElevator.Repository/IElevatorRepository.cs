@@ -6,6 +6,8 @@ namespace DVTElevator.Repository
     public interface IElevatorRepository
     {
         ErrorHandling AddElevator(ElevatorService elevator);
-        (ErrorHandling ErrorHandling, ElevatorService? Elevator) RequestElevator(int floor);
+        ErrorHandling TakeAnElevator(int floor, Person person);
+        ErrorHandling Move();
+        ErrorHandling GetOff();
     }
 }

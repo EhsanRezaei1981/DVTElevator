@@ -9,7 +9,6 @@ var command= "";
 var isExit = false;
 var repo = new ElevatorRepository();
 int? elevatorRequestedFromFloor = null;
-DTVElevator.Service.Elevator.ElevatorService selectedElevator = null;
 List<Menu> menus;
 loadMenus();
 
@@ -25,18 +24,18 @@ while (!isEnd) {
             listOfElavators();
             break;
         case "3":
-            requestAnElevator();
+            takeAnElevator();
             break;
+        //case "4":
+        //    addPerson();
+        //    break;
         case "4":
-            addPerson();
-            break;
-        case "5":
             moveElevator();
             break;
-        case "6":
+        case "5":
             getOff();
             break;
-        case "7":
+        case "6":
             Console.Clear();
             break;
         case "0":
@@ -58,9 +57,6 @@ void generateMainMenu()
         Console.WriteLine($"{menu.Command}. {menu.Name}");
     }
     Console.WriteLine();
-    if (selectedElevator is not null)
-        WriteMessage($"Elevator {selectedElevator.Name} is selected.", false);
-
     Console.WriteLine();
 }
 
@@ -120,7 +116,7 @@ void listOfElavators() {
         Console.WriteLine();
     }
 }
-void requestAnElevator() {
+void takeAnElevator() {
     try
     {
         if (repo.Elevators.Count == 0)
@@ -128,59 +124,52 @@ void requestAnElevator() {
             WriteMessage("No elevators specified", true);
             return;
         }
-        Console.Write("Request an elevator from floor: ");
-        var floor =int.Parse( Console.ReadLine());
 
-        var (errorHandling,elevator) = repo.RequestElevator(floor);
+        Console.Write("Take an elevator from floor: ");
+        var floor =int.Parse( Console.ReadLine());
+        
+        Console.Write("Weight of the passenger: ");
+        var weight= int.Parse(Console.ReadLine());
+        
+        Console.Write("Floor to go: ");
+        var floorToGo = int.Parse(Console.ReadLine());
+
+        var errorHandling = repo.TakeAnElevator(floor, new DTVElevator.Dto.Model.Person { Weight = weight, FloorToGo = floorToGo });
         if (!errorHandling.Successful) {
             WriteMessage(errorHandling.Message, true);
             return;
         }
         elevatorRequestedFromFloor= floor;
-        selectedElevator = elevator;
     }
     catch (Exception ex) {
         WriteMessage(ex.Message, true);
     }
 }
 
-void addPerson() {
-    if (selectedElevator is null) {
-        WriteMessage("No elevator selected", true);
-        return;
-    }
-    Console.Write("Weight of the person: ");
-    var weight=int.Parse(Console.ReadLine());
-    Console.Write("Floor to go: ");
-    var floor = int.Parse(Console.ReadLine());
-    var result = selectedElevator.AddPerson(new DTVElevator.Dto.Model.Person { Weight = weight, FloorToGo = floor });
-    WriteMessage(result.Message,!result.Successful);
-    return;
-}
+//void addPerson() {
+//    if (selectedElevator is null) {
+//        WriteMessage("No elevator selected", true);
+//        return;
+//    }
+//    Console.Write("Weight of the person: ");
+//    var weight=int.Parse(Console.ReadLine());
+//    Console.Write("Floor to go: ");
+//    var floor = int.Parse(Console.ReadLine());
+//    var result = selectedElevator.AddPerson(new DTVElevator.Dto.Model.Person { Weight = weight, FloorToGo = floor });
+//    WriteMessage(result.Message,!result.Successful);
+//    return;
+//}
 
 void moveElevator()
 {
-    if (selectedElevator is null)
-    {
-        WriteMessage("No elevator selected", true);
-        return;
-    }
-    var result = selectedElevator.Move();
+    var result=repo.Move();
     WriteMessage(result.Message, !result.Successful);
-    return;
 }
 
 void getOff()
 {
-    if (selectedElevator is null)
-    {
-        WriteMessage("No elevator selected", true);
-        return;
-    }
-    
-    var result = selectedElevator.GetOff();
+    var result = repo.GetOff();
     WriteMessage(result.Message, !result.Successful);
-    return;
 }
 
 void loadMenus()
@@ -196,22 +185,22 @@ void loadMenus()
     },
     new Menu{
         Command="3",
-        Name="Request an Elevator"
+        Name="Take an Elevator"
     },
+    //new Menu{
+    //    Command="4",
+    //    Name="Add Person"
+    //},
     new Menu{
         Command="4",
-        Name="Add Person"
-    },
-    new Menu{
-        Command="5",
         Name="Move Selected Elevator"
     },
     new Menu{
-        Command="6",
+        Command="5",
         Name="Get Off"
     },
     new Menu{
-        Command="7",
+        Command="6",
         Name="Clear Console"
     },
     new Menu{

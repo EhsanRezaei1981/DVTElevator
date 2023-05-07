@@ -1,7 +1,6 @@
 ﻿using DTVElevator.Dto.Enums;
 using DTVElevator.Dto.Model;
 using DVTElevator.Service.Elavator;
-using System.Security.Cryptography.X509Certificates;
 
 namespace DTVElevator.Service.Elevator
 {
@@ -125,51 +124,51 @@ namespace DTVElevator.Service.Elevator
             };
         }
 
-        public virtual ErrorHandling AddPerson(Person person)
-        {
-            var operating = CheckIfElevatorOperates();
-            if (!operating.Successful)
-                return operating;
+        //ErrorHandling AddPerson(Person person)
+        //{
+        //    var operating = CheckIfElevatorOperates();
+        //    if (!operating.Successful)
+        //        return operating;
 
-            if (WorkingFloors is null || !WorkingFloors.Any())
-                return new ErrorHandling
-                {
-                    Message = "No floors specified",
-                };            
+        //    if (WorkingFloors is null || !WorkingFloors.Any())
+        //        return new ErrorHandling
+        //        {
+        //            Message = "No floors specified",
+        //        };            
 
-            if (Status != ElevatorStatus.Stopped)
-                return new ErrorHandling
-                {
-                    Message = "Safety issue. We cannot accept adding person while the elavator is moving.",
-                };
+        //    if (Status != ElevatorStatus.Stopped)
+        //        return new ErrorHandling
+        //        {
+        //            Message = "Safety issue. We cannot accept adding person while the elavator is moving.",
+        //        };
 
-            if (!WorkingFloors.Any(x => x == person.FloorToGo))
-                return new ErrorHandling
-                {
-                    Message = $"Limited floor. The elavator cannot stop in floor {person.FloorToGo} or the floor does not exist.",
-                };
+        //    if (!WorkingFloors.Any(x => x == person.FloorToGo))
+        //        return new ErrorHandling
+        //        {
+        //            Message = $"Limited floor. The elavator cannot stop in floor {person.FloorToGo} or the floor does not exist.",
+        //        };
 
-            var totalCurrentWeight = People.Sum(x => x.Weight);
-            if (totalCurrentWeight + person.Weight > MaxWeight)
-                return new ErrorHandling
-                {
-                    Message = "Limited weight. Please use another elavator."
-                };
+        //    var totalCurrentWeight = People.Sum(x => x.Weight);
+        //    if (totalCurrentWeight + person.Weight > MaxWeight)
+        //        return new ErrorHandling
+        //        {
+        //            Message = "Limited weight. Please use another elavator."
+        //        };
 
-            if (person.FloorToGo == CurrentFloor)
-                return new ErrorHandling
-                {
-                    Message = $"You are in the floor {person.FloorToGo}."
-                };
+        //    if (person.FloorToGo == CurrentFloor)
+        //        return new ErrorHandling
+        //        {
+        //            Message = $"You are in the floor {person.FloorToGo}."
+        //        };
 
-            People.Add(person);
+        //    People.Add(person);
 
-            return new ErrorHandling
-            {
-                Message = "A person added successfully.",
-                Successful = true
-            };
-        }
+        //    return new ErrorHandling
+        //    {
+        //        Message = "A person added successfully.",
+        //        Successful = true
+        //    };
+        //}
 
         public void SetCurrentFloor(int floor) {
             CurrentFloor = floor;
