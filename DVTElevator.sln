@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVTElevator.App", "DVTElevator.App\DVTElevator.App.csproj", "{A2959DC5-52DE-49BB-ACCB-39D333EDC473}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DVTElevator.App", "DVTElevator.App\DVTElevator.App.csproj", "{A2959DC5-52DE-49BB-ACCB-39D333EDC473}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTVElevator.Dto", "DTVElevator.Dto\DTVElevator.Dto.csproj", "{83FAAD9D-5F63-4DE7-8E93-2981F3F7CDBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTVElevator.Dto", "DTVElevator.Dto\DTVElevator.Dto.csproj", "{83FAAD9D-5F63-4DE7-8E93-2981F3F7CDBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVTElevator.Service", "DVTElevator.Service\DVTElevator.Service.csproj", "{DD69CD1C-FE59-45D3-93C2-E7E2890DBB4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DVTElevator.Service", "DVTElevator.Service\DVTElevator.Service.csproj", "{DD69CD1C-FE59-45D3-93C2-E7E2890DBB4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVTElevator.Repository", "DVTElevator.Repository\DVTElevator.Repository.csproj", "{ACB15702-D28F-4907-B4BF-E9FE1A2A1240}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DVTElevator.Repository", "DVTElevator.Repository\DVTElevator.Repository.csproj", "{ACB15702-D28F-4907-B4BF-E9FE1A2A1240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVTElevator.xUnitTest", "DVTElevator.xUnitTest\DVTElevator.xUnitTest.csproj", "{4B8E0703-42BE-4FEE-AB3B-06E8597756C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{ACB15702-D28F-4907-B4BF-E9FE1A2A1240}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACB15702-D28F-4907-B4BF-E9FE1A2A1240}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACB15702-D28F-4907-B4BF-E9FE1A2A1240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B8E0703-42BE-4FEE-AB3B-06E8597756C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B8E0703-42BE-4FEE-AB3B-06E8597756C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B8E0703-42BE-4FEE-AB3B-06E8597756C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B8E0703-42BE-4FEE-AB3B-06E8597756C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
